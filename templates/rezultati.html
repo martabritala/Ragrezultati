@@ -71,10 +71,9 @@
             <th>Robotika</th>
             <th>Krievu valoda</th>
           </tr>
-          {% set mainigais = 0 %}
           {%for linija in linijas %}
           <tr>
-            <td>{% set mainigais = mainigais+1 %} {{mainigais}}</td>
+            <td>{{loop.index}}</td>
             {% for vards in linija %}
             <td>
               {% if linija[vards] == None %}
