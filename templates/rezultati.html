@@ -50,6 +50,7 @@
       <div id="rezultati">
         <table class="table-sm table-bordered table-striped">
           <tr class="sticky-top">
+            <th>Nr.p.k.</th>
             <th>Nr. (pieteikšanās)</th>
             <th>Eksāmena kods</th>
             <th>Vārds</th>
@@ -62,16 +63,18 @@
             <th>2. padziļinātais kurss</th>
             <th>3. padziļinātais kurss</th>
             <th>Debates</th>
-            <th>Angļu literatūra</th>
-            <th>Filozofija</th>
+            <!-- <th>Angļu literatūra</th> -->
+            <!-- <th>Filozofija</th> -->
             <th>Publiskā runa</th>
-            <th>Papildu angļu valoda</th>
-            <th>Psiholoģija</th>
+            <!-- <th>Papildu angļu valoda</th> -->
+            <!-- <th>Psiholoģija</th> -->
             <th>Robotika</th>
             <th>Krievu valoda</th>
           </tr>
+          {% set mainigais = 0 %}
           {%for linija in linijas %}
           <tr>
+            <td>{% set mainigais = mainigais+1 %} {{mainigais}}</td>
             {% for vards in linija %}
             <td>
               {% if linija[vards] == None %}
